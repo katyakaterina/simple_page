@@ -15,8 +15,9 @@ gulp.task('sass', function() {
     return gulp.src('./src/style/**/*.scss')
     // .pipe(sass().on('error, sass.logError'))
     .pipe(sass({outputStyle:'expanded'})).on('error', sass.logError)
-    .pipe(autoprefixer({
-        browsers:['last 2 versions'],cascade: false}))
+    .pipe(autoprefixer(['last 30 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+    // .pipe(autoprefixer({
+    //     browsers:['last 2 versions'],cascade: false}))
     .pipe(csso())
     .pipe(rename('main.css'))
     .pipe(gulp.dest('dest/css'));

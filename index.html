@@ -15,7 +15,9 @@
         <section class="header__inner">
             <div class="header__left"></div>
             <div class="header__right">
-                <form class="form" action="" method="POST">
+                <button class="header__signin button">Sign In</button>
+                <button class="header__signup button">Sign Up</button>
+                <form class="header__form form" action="" method="POST">
                     <label class="form__label">Your name
                         <input class="form__input" type="text" name="name" placeholder="Name">
                     </label>
@@ -27,7 +29,7 @@
                     </label class="form__label">
                     <button>Sign Up</button>
                 </form>
-                <form class="form" action="">
+                <form class="header__form form" action="">
                     <label class="form__label">Your email
                         <input type="email" name="email" placeholder="">
                     </label>
@@ -41,8 +43,8 @@
     </header>
     <main>
         <section class="cover">
-            <div class="cover__headline">
-                <h1>Pricing</h1>
+            <div class="cover__box">
+                <h1 class="cover__headline">Pricing</h1>
                 <div class="cover__left">
                     <h2 class="cover__title">$1/gb</h2>
                     <h3 class="cover__subtitle">Disk space</h3>
@@ -54,7 +56,42 @@
                     <p class="cover__detail">Every 10hr, get 1hr free</p>
                 </div>
             </div>
-            <div class="cover__table"></div>
+            <div class="cover__table">
+                <div class="cover__list">
+                    <h3 class="cover__title">Purches monthly plan</h3>
+                    <p class="cover__heading">Plan</p>
+                    <p class="cover__heading">Mpnthly price</p>
+                    <p class="cover__heading">Fast time</p>
+                </div>
+                <div class="cover__option">
+                    <h3 class="cover__headline--m">Super charged</h3>
+                    <p class="cover__detail">$14.99</p>
+                    <p class="cover__detail">20gb</p>
+                    <p class="cover__detail">50hrs</p>
+                    <button class="cover__buy button">Buy</button>
+                </div>
+                <div class="cover__option">
+                    <h3 class="cover__headline--m">Turbo</h3>
+                    <p class="cover__detail">$9.99</p>
+                    <p class="cover__detail">4gb</p>
+                    <p class="cover__detail">25hrs</p>
+                    <button class="cover__buy button">Buy</button>
+                </div>
+                <div class="cover__option">
+                    <h3 class="cover__headline--m">Premium</h3>
+                    <p class="cover__detail">$4.99</p>
+                    <p class="cover__detail">4gb</p>
+                    <p class="cover__detail">10hrs</p>
+                    <button class="cover__buy button">Buy</button>
+                </div>
+                <div class="cover__option">
+                    <h3 class="cover__headline--m">Free</h3>
+                    <p class="cover__detail">$0</p>
+                    <p class="cover__detail">2gb</p>
+                    <p class="cover__detail">-</p>
+                    <button class="cover__buy button">Buy</button>
+                </div>
+            </div>
         </section>
     </main>
 

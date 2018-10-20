@@ -1,0 +1,36 @@
+.cover{
+    &__box{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        min-width: 280px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__left, &__right{
+        text-align: center;
+    }
+    &__title{
+        background: -webkit-linear-gradient(45deg, $warmcolor, $white);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        font-weight: 200;
+    }
+
+   
+}
+@media (min-width: 550px){
+    .cover{
+        &__box{
+            min-width: 500px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &__headline{
+            flex-basis: 100%;
+        text-align: center;
+        }
+    }
+}

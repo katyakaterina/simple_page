@@ -11,17 +11,25 @@ var csso = require('gulp-csso');
 var autoprefixer = require('gulp-autoprefixer');
 
 
+// gulp.task('sass', function() {
+//     return gulp.src('./src/style/**/*.scss')
+//     .pipe(sass({outputStyle:'expanded'})).on('error', sass.logError)
+//     .pipe(autoprefixer(['last 30 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+//     .pipe(csso())
+//     .pipe(rename('main.css'))
+//     .pipe(gulp.dest('dest/css'));
+// });
+
 gulp.task('sass', function() {
-    return gulp.src('./src/style/**/*.scss')
-    // .pipe(sass().on('error, sass.logError'))
-    .pipe(sass({outputStyle:'expanded'})).on('error', sass.logError)
+    gulp.src('src/style/**/*.scss')
+    .pipe(sass()).on('error', sass.logError)
     .pipe(autoprefixer(['last 30 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-    // .pipe(autoprefixer({
-    //     browsers:['last 2 versions'],cascade: false}))
     .pipe(csso())
-    .pipe(rename('main.css'))
-    .pipe(gulp.dest('dest/css'));
+    .pipe(rename(function (path) {}))
+    .pipe(gulp.dest('dest/css'))
 });
+
+
 // gulp.task('minify-css', () => {
 //     return gulp.src('./*.css')
 //       .pipe(cleanCSS({debug: true}, (details) => {
@@ -54,7 +62,7 @@ gulp.task('sass:watch', function(){
 // })
 // });
 
-// gulp.task('css', function() {
+// gulp.task('css', function() 
 //     return gulp.src(['./lib/file3.js', './lib/file1.js', './lib/file2.js'])
 //       .pipe(concat('all.js'))
 //       .pipe(gulp.dest('./dist/'));

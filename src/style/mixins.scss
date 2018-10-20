@@ -1,0 +1,13 @@
+@mixin button{
+    padding: 15px;
+    border: transparent;
+    border-radius: 30px;
+    color: $white;
+    font-weight: 600;
+}
+@mixin signin{
+    background: linear-gradient(45deg, $pink, $yellow);
+}
+@mixin signup{
+    background: linear-gradient(45deg, $light, $white);
+}

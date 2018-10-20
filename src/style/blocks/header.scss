@@ -1,9 +1,26 @@
-// form{
-//     display: none;
-// }
+form{
+    display: none;
+}
 .header{
-    &__form{
-display: none;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
     }
-    
+    &__signin, &__signup{
+        width: 100px;
+        @include signin;
+
+    }
+    &__signup{
+        @include signup;
+    }
+}
+@media(min-width:320px){
+    .header{
+        &__signin, &__signup{
+            padding: 10px;
+            width: 70px;
+        }
+    }  
+   
 }

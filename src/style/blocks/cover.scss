@@ -18,6 +18,20 @@
         text-transform: uppercase;
         font-weight: 200;
     }
+    &__table{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 10em 10em 10em 10em 10em;
+        grid-gap: 1.5em;
+        width: calc(100% - 1.5em);
+
+    }
+    &__table>div{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
 
    
 }
@@ -32,5 +46,9 @@
             flex-basis: 100%;
         text-align: center;
         }
+    }
+    &__table{
+        min-width: 20em;
+
     }
 }
